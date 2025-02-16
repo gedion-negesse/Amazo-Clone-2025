@@ -1,4 +1,4 @@
-let datainfo = [
+export const datainfo = [
   {
     title: "Electronics",
     img: "https://m.media-amazon.com/images/I/71BGZ2RL9VL._AC_UL480_FMwebp_QL65_.jpg",
@@ -12,7 +12,7 @@ let datainfo = [
 
   {
     title: "Men's Clothung",
-    img: "https://m.media-amazon.com/images/I/61o1EHgF8wL._AC_SX679_.jpg",
+    img: "https://m.media-amazon.com/images/I/61ChVaDO1ML._AC_SY550_.jpg",
     desc: "shope now",
   },
 
@@ -22,4 +22,3 @@ let datainfo = [
     desc: "shope now",
   },
 ];
-export default datainfo;
