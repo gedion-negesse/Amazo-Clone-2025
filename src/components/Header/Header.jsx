@@ -49,6 +49,7 @@ function Header() {
                 <option value="">EN</option>
               </select>
             </a>
+
             {/*the three components */}
             <a href="">
               <p>Sign In</p>
