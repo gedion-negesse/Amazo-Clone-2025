@@ -31,7 +31,11 @@ function ProductDetail() {
   return (
     <LayOut>
       {/*we pass the pased id data tas aprop to the product card*/}
-      {isLoading ? <Loader /> : <ProductCard data={product} />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <ProductCard data={product} flex={true} renderDesc={true} />
+      )}
     </LayOut>
   );
 }
