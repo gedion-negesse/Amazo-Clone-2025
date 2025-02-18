@@ -4,6 +4,7 @@ import { BiCart } from "react-icons/bi";
 import { SlLocationPin } from "react-icons/sl";
 import classes from "./Header.module.css";
 import LowerHeader from "./LowerHeader";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -12,12 +13,12 @@ function Header() {
         <div className={classes.header__container}>
           {/*left side dive */} {/*logo */}
           <div className={classes.logo__container}>
-            <a href="/">
+            <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="amzon logo"
               />
-            </a>
+            </Link>
           </div>
           {/*delivery section*/}
           <div className={classes.delivery}>
@@ -40,7 +41,7 @@ function Header() {
           </div>
           {/*right side dive */}
           <div className={classes.order__container}>
-            <a href="" className={classes.language}>
+            <Link to="" className={classes.language}>
               <img
                 src="https://pngimg.com/uploads/flags/flags_PNG14655.png"
                 alt=""
@@ -48,25 +49,25 @@ function Header() {
               <select name="" id="">
                 <option value="">EN</option>
               </select>
-            </a>
+            </Link>
 
             {/*the three components */}
-            <a href="">
+            <Link to="/auth">
               <p>Sign In</p>
               <span>Account & Lists</span>
-            </a>
+            </Link>
             {/*orders */}
-            <a href="">
+            <Link to="/orders">
               <p>returns</p>
               <span>& Orders</span>
-            </a>
+            </Link>
 
             {/*cart */}
-            <a href="" className={classes.cart}>
+            <Link to="/cart" className={classes.cart}>
               <BiCart size={35} />
 
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

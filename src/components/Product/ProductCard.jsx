@@ -31,7 +31,8 @@ function ProductCard({ data }) {
 
 export default ProductCard;
 
-//destructruing method//
+//destructruing method////
+
 /*function ProductCard({ data }) {
   const { image, title, id, rating, price } = data;
 
