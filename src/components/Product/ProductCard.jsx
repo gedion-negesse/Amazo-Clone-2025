@@ -2,22 +2,26 @@ import React from "react";
 import { Rating } from "@mui/material";
 import CurrencyFormator from "../CurrencyFormator/CurrencyFormator";
 import classes from "./product.module.css";
-function ProductCard({ data }) {
+import { Link } from "react-router-dom";
+
+/*function ProductCard({ data }) {
+  const { image, title, id, rating, price } = data;
+  const { rate, count } = rating || {}; // Use `|| {}` to avoid errors if `rating` is undefined
   return (
     <div className={`${classes.card__container}`}>
-      <a href="">
-        <img src={data.image} alt="" />
-      </a>
+      <Link to={`products/${id}`}>
+        <img src={data.image} alt="" className={classes.img_container} />
+      </Link>
 
       <div>
         <h4>{data.title}</h4>
 
         <div className={classes.rating}>
-          {/*rateing /*instal rating from material icon*/}
-          <Rating value={data.rating.rate} precision={0.1} />
+          {/*rateing /*instal rating from material icon*/
+/* <Rating value={data.rating.rate} precision={0.1} />}
 
-          {/*count /*installing numerals fro pricing from numeral.js*/}
-          <small>{data.rating.count}</small>
+          {/*count /*installing numerals fro pricing from numeral.js*/
+/* <small>{data.rating.count}</small>
         </div>
         <div>
           <CurrencyFormator amount={data.price} />
@@ -29,29 +33,32 @@ function ProductCard({ data }) {
   );
 }
 
-export default ProductCard;
+export default ProductCard;*/
 
 //destructruing method////
 
-/*function ProductCard({ data }) {
+function ProductCard({ data }) {
   const { image, title, id, rating, price } = data;
+
+  // we have to Destructure `rate` and `count` from `rating`
+  const { rate, count } = rating || {}; // Use `|| {}` to avoid errors if `rating` is undefined
 
   return (
     <div className={`${classes.card__container}`}>
-      <a href="">
-        <img src={image} alt="" />
-      </a>
+      <Link to={`products/${id}`}>
+        <img src={image} alt="" className={classes.img_container} />
+      </Link>
 
       <div>
         <h2>{title}</h2>
       </div>
       <div className={classes.rating}>
-        {/*rateing /*instal rating from material icon*/
-//<Rating value={rating.rate} precision={0.1} />
+        {/*rateing /*instal rating from material icon*/}
 
-/* {/*count /*installing numerals fro pricing from numeral.js*/
-/*  <small>{rating.count}</small>
-     // </div>
+        <Rating value={rate} precision={0.1} />
+        {/*count /*installing numerals fro pricing from numeral.js*/}
+        <small>{count}</small>
+      </div>
       <div>
         <CurrencyFormator amount={price} />
       </div>
@@ -60,4 +67,4 @@ export default ProductCard;
   );
 }
 
-export default ProductCard;*/
+export default ProductCard;
