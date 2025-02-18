@@ -1,23 +1,23 @@
 export const datainfo = [
   {
-    title: "Electronics",
+    title: "electronics",
     img: "https://m.media-amazon.com/images/I/71BGZ2RL9VL._AC_UL480_FMwebp_QL65_.jpg",
     desc: "shope now",
   },
   {
-    title: "Jewelery",
+    title: "jewelery",
     img: "https://m.media-amazon.com/images/I/81YUtidOP5L._AC_SY535_.jpg",
     desc: "shope now",
   },
 
   {
-    title: "Men's Clothung",
+    title: "men's clothing",
     img: "https://m.media-amazon.com/images/I/61ChVaDO1ML._AC_SY550_.jpg",
     desc: "shope now",
   },
 
   {
-    title: "Discover fashion trends",
+    title: "women's clothing",
     img: "https://m.media-amazon.com/images/I/815lLjrKzzL._AC_SY550_.jpg",
     desc: "shope now",
   },
