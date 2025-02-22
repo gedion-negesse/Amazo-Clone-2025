@@ -7,7 +7,7 @@ function CatagoryCard({ data }) {
     <div className={classes.catagory}>
       <Link to={`/category/${data.title}`}>
         <span>
-          <h2>{data.title}</h2>
+          <h2>{data?.title}</h2>
         </span>
         <img src={data.img} alt="" />
         <p>shop now</p>

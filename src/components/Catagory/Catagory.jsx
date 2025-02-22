@@ -5,7 +5,7 @@ import classes from "./catagory.module.css";
 function Catagory() {
   return (
     <section className={classes.Catagory__container}>
-      {datainfo.map((info) => (
+      {datainfo?.map((info) => (
         <CatagoryCard data={info} />
       ))}
     </section>
