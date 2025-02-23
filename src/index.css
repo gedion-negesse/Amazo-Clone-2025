@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: sans-serif; /*font familly is set to be sansarif for all*/
+  box-sizing: border-box;
 }
 /*defining the root colors to be inherited by the lower level components in this this is set as avariable, and it will be call as var-- */
 :root {
