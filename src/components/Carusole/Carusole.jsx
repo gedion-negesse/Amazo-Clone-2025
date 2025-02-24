@@ -10,6 +10,7 @@ function Carusole() {
         autoPlay={true}
         infiniteLoop={true}
         showIndicators={false}
+        showStatus={false}
         showThumbs={false}
       >
         {imageList.map((image, i) => {
