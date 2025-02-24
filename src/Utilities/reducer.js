@@ -6,6 +6,7 @@ import { Type } from "./action.type";
 //2/defininig the initial state
 export const initialState = {
   basket: [],
+  user: null,
 };
 
 //3/ dfining the reduce frunction
@@ -45,7 +46,7 @@ export const reducer = (state, action) => {
 
         return { ...state, basket: updatedBasket };
       }
-    /* case Type.REMOVE_FROM_BASKET:
+    case Type.REMOVE_FROM_BASKET:
       const index = state.basket.findIndex((item) => item.id === action.id);
       let newBasket = [...state.basket];
       if (index >= 0) {
@@ -61,11 +62,11 @@ export const reducer = (state, action) => {
       return {
         ...state,
         basket: newBasket,
-      };*/
+      };
 
     // second method of updating cart
 
-    case Type.REMOVE_FROM_BASKET:
+    /*case Type.REMOVE_FROM_BASKET:
       return {
         ...state,
         basket: state.basket
@@ -73,7 +74,14 @@ export const reducer = (state, action) => {
             item.id === action.id ? { ...item, amount: item.amount - 1 } : item
           )
           .filter((item) => item.amount > 0), // Filter out items with amount .0 and Remove item if amount becomes 0,
+      };*/
+
+    case Type.SET_USER: //action type is set_user
+      return {
+        ...state, // keep all the current state
+        user: action.user, // add user coming from the action
       };
+
     default:
       return state;
   }
