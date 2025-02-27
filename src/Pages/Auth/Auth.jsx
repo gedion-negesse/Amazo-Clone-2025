@@ -12,6 +12,8 @@ import {
 import { Datacontext } from "../../components/DataProvider/DataProvider"; // after we set the user on reducer we have to provid for all componets about the user
 import { Type } from "../../Utilities/action.type";
 
+import { useLocation } from "react-router-dom";
+
 function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,6 +23,9 @@ function Auth() {
   //console.log(user);
 
   const navigate = useNavigate(); // import and use navigate to use it the customer navigat to home page after sign in or sign up
+  const navStateData = useLocation(); //special hook we use it to redirect the path
+
+  console.log(navStateData);
   const [loading, setLoading] = useState({
     // creating initial state of loader(spinner) for sign in and sign up
 
@@ -44,7 +49,7 @@ function Auth() {
             user: userInfo.user,
           });
           setLoading({ ...loading, signin: false });
-          navigate("/");
+          navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           setError(err.message);
@@ -62,7 +67,7 @@ function Auth() {
             user: userInfo.user,
           });
           setLoading({ ...loading, signup: false });
-          navigate("/");
+          navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           setError(err.message);
@@ -85,6 +90,18 @@ function Auth() {
       {/*form dive */}
       <div className={classes.login__container}>
         <h1>Sign in</h1> <br />
+        {navStateData?.state?.msg && (
+          <small
+            style={{
+              padding: "5px",
+              textAlign: "center",
+              color: "red",
+              fontweight: "bold",
+            }}
+          >
+            {navStateData?.state?.msg}
+          </small>
+        )}
         <form action="">
           <div>
             <label htmlFor="email">E-mail</label>

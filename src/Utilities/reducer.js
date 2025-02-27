@@ -76,6 +76,12 @@ export const reducer = (state, action) => {
           .filter((item) => item.amount > 0), // Filter out items with amount .0 and Remove item if amount becomes 0,
       };*/
 
+    case Type.EMPTY_BASKET:
+      return {
+        ...state,
+        basket: [],
+      };
+
     case Type.SET_USER: //action type is set_user
       return {
         ...state, // keep all the current state

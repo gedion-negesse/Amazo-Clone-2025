@@ -8,7 +8,8 @@
   align-items: center; /* Center items vertically */
   gap: 15px;
 
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: -10%;
 }
 
@@ -69,3 +70,16 @@
     font-size: 1.2rem;
   }
 }
+
+/*.Catagory__container{
+position: relative;
+margin-top: -10%;
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(350px ,1fr));
+max-width: 1600px;
+gap: 50px;
+place-items: center;
+margin-right:auto;
+margin-left:auto;
+
+}*/
