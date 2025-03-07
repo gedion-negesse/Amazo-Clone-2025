@@ -13,6 +13,7 @@ function ProductCard({ data, flex, renderDesc, renderAdd }) {
 
   console.log("Current state:", state); // Debugging state
   const item = { image, title, rating, id, price, description, rate, count };
+
   const addToCart = () => {
     console.log("Adding to cart:", item); // Debugging item
     dispatch({
@@ -55,36 +56,3 @@ function ProductCard({ data, flex, renderDesc, renderAdd }) {
 }
 
 export default ProductCard;
-
-///// the second method//
-
-/*function ProductCard({ data }) {
-  const { image, title, id, rating, price } = data;
-  const { rate, count } = rating || {}; // Use `|| {}` to avoid errors if `rating` is undefined
-  return (
-    <div className={`${classes.card__container}`}>
-      <Link to={`products/${id}`}>
-        <img src={data.image} alt="" className={classes.img_container} />
-      </Link>
-
-      <div>
-        <h4>{data.title}</h4>
-
-        <div className={classes.rating}>
-          {/*rateing /*instal rating from material icon*/
-/* <Rating value={data.rating.rate} precision={0.1} />}
-
-          {/*count /*installing numerals fro pricing from numeral.js*/
-/* <small>{data.rating.count}</small>
-        </div>
-        <div>
-          <CurrencyFormator amount={data.price} />
-        </div>
-
-        <button className={classes.button}>add to cart</button>
-      </div>
-    </div>
-  );
-}
-
-export default ProductCard;*/

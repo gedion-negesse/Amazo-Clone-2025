@@ -56,7 +56,7 @@ export const reducer = (state, action) => {
             amount: newBasket[index].amount - 1,
           };
         } else {
-          newBasket.splice(index, 1);
+          newBasket.splice(index, 1); //or else remove the item in that index
         }
       }
       return {

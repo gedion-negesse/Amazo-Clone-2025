@@ -81,6 +81,7 @@
 .subtotal > div,
 .subtotal span {
   display: flex;
+
   gap: 20px;
 }
 

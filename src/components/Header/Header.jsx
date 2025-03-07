@@ -11,6 +11,7 @@ import { auth } from "../../Utilities/firebase"; // we use the method we got fro
 function Header() {
   const [{ basket, user }, dispatch] = useContext(Datacontext);
   console.log(basket.length);
+
   const totalItem = basket?.reduce((amount, item) => {
     return item.amount + amount;
   }, 0);
