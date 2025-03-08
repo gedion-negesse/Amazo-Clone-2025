@@ -20,7 +20,7 @@ const stripePromise = loadStripe(
 
 function Routing() {
   return (
-    <Router>
+    <Router basename="/Amazo-Clone-2025">
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/auth" element={<Auth />} />
