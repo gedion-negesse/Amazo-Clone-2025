@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <Routing />
+      <Routing basename="/Amazo-Clone-2025" />
     </>
   );
 }
