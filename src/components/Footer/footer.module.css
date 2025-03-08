@@ -7,10 +7,10 @@
 .back_to_top {
   background-color: #37475a;
   text-align: center;
-  padding: 15px 0;
+  padding: 20px 0;
   cursor: pointer;
   font-size: 14px;
-  font-weight: bold;
+  height: 50px;
   transition: background-color 0.3s ease-in-out;
 }
 
