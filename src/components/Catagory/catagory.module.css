@@ -1,0 +1,50 @@
+.Catagory__container {
+  position: relative;
+  margin-top: -10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  max-width: 1600px;
+  gap: 15px;
+  place-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*Individual category card */
+.catagory {
+  background-color: #ffffff;
+
+  /*box-shadow: 0 0px 2px gray;*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  height: 300px;
+}
+
+.catagory a {
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+}
+/* Title inside the card */
+
+.catagory h2,
+.catagory p {
+  padding: 5px;
+  margin-left: 15px;
+}
+/* Image inside the card*/
+.catagory img {
+  padding: 0 10px;
+  width: 100%;
+  object-fit: contain;
+  max-height: 200px;
+}
+
+.catagory p {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(9, 132, 209);
+}
