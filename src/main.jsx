@@ -6,7 +6,11 @@ import DataProvider from "./components/DataProvider/DataProvider.jsx";
 import { reducer, initialState } from "./Utilities/reducer.js";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <DataProvider reducer={reducer} initialState={initialState}>
+    <DataProvider
+      basename="/Amazo-Clone-2025/"
+      reducer={reducer}
+      initialState={initialState}
+    >
       <App />
     </DataProvider>
   </StrictMode>
